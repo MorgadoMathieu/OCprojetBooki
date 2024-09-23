@@ -170,16 +170,24 @@ a {
 
 /* mes ajouts */
 header{
-
-}
-.logo-header{
-    size: 1fr;
-}
-
-.liens-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding-top:     5px;
+    padding-bottom: 20px;
+}
+.logo-header{
+    width: 40%;
+}
 
+.espace-liens{
+    padding : 15px;
+}
+
+a:hover{
+    color:#0065FC;
+    border-top: solid;
+
+    
 }
