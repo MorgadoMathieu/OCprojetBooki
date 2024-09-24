@@ -169,14 +169,16 @@ a {
 
 
 /* mes ajouts */
+
+/* header */
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top:     5px;
     padding-bottom: 20px;
 }
+
 .logo-header{
     width: 40%;
 }
@@ -185,9 +187,55 @@ header{
     padding : 15px;
 }
 
-a:hover{
-    color:#0065FC;
-    border-top: solid;
+.liens-header{
+    padding : 10px;
+}
 
-    
+.liens-header:hover{
+    color:#0065FC;
+    border-top: solid; 
+}
+
+/* formulaire recherche */
+
+.recherche{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 49px;
+    max-width: 377px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.research-pinmap{
+    background-color: #d9d9d9;
+    width: 50px;
+    height: 49px;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+}
+
+.research-button{
+    background-color: #0065FC;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    width: 132px;
+    height: 49px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
 }
