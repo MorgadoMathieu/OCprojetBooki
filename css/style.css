@@ -239,3 +239,51 @@ header{
     border-radius: 0px 15px 15px 0px;
     border: none;
 }
+
+
+/* filtres */
+.filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+}
+
+.filters-button{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+    gap: 5px;
+    font-weight: bold;
+    padding: 4px 19px 4px 19px;
+    
+}
+
+.filters-button:hover,
+.info-accomodation-button:hover{
+    background-color: #DEEBFF;
+}
+
+/* info accomodation */
+
+.info-accomodation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-accomodation-button{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #d9d9d9;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
