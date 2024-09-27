@@ -69,6 +69,10 @@ a {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+
+    /* j'ai changé le padding top pour qu'il corresponde le plus possible à la maquette */
+    padding-top: 10px;
+
 }
 
 /****** Hebergements ***********/
@@ -170,7 +174,54 @@ a {
 
 /* mes ajouts */
 
-/* header */
+.section-title{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.afficher-plus{
+    font-weight: bold;
+    font-size: large;
+}
+
+
+/* #region display */
+
+.display-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.display-section1{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.display-section2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.display-section3{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.display-hebergements-and-populaires{
+    /* je force le padding top car il ne correspond pas à la maquette sans */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* #endregion display */
+
+/* #region header */
 header{
     display: flex;
     flex-direction: row;
@@ -192,11 +243,12 @@ header{
 }
 
 .liens-header:hover{
-    color:#0065FC;
+    color: var(--main-color);
     border-top: solid; 
 }
+/* #endregion header */
 
-/* formulaire recherche */
+/* #region formulaire recherche */
 
 .recherche{
     display: flex;
@@ -205,12 +257,12 @@ header{
     flex-direction: row;
     height: 49px;
     max-width: 377px;
-    background-color: #d9d9d9;
+    background-color: var(--main-bg-color);
     border-radius: 15px;
 }
 
 .research-pinmap{
-    background-color: #d9d9d9;
+    background-color: var(--main-bg-color);
     width: 50px;
     height: 49px;
     border-radius: 15px 0px 0px 15px;
@@ -229,8 +281,14 @@ header{
     font-size: 16px;
 }
 
+.research-text input{
+    text-align: center;
+    font-weight: bold;
+}
+
+
 .research-button{
-    background-color: #0065FC;
+    background-color: var(--main-color);
     font-weight: bold;
     font-size: large;
     color: white;
@@ -240,8 +298,12 @@ header{
     border: none;
 }
 
+input::placeholder{
+    font-weight: bold;
+}
+/* #endregion formulaire recherche */
 
-/* filtres */
+/* #region filtres */
 .filters{
     display: flex;
     flex-direction: row;
@@ -250,9 +312,13 @@ header{
     height: 50px;
 }
 
+.filters-title{
+    font-weight: bold;
+}
+
 .filters-button{
     width: auto;
-    height: auto;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,20 +331,21 @@ header{
 }
 
 .filters-button:hover,
-.info-accomodation-button:hover{
-    background-color: #DEEBFF;
+.info-logements-button:hover{
+    background-color: var(--filter-bg-color);
 }
+/* #endregion filtres */
 
-/* info accomodation */
+/* #region info logements */
 
-.info-accomodation{
+.info-logements{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 
-.info-accomodation-button{
+.info-logements-button{
     width: 24px;
     height: 24px;
     border: 1px solid #d9d9d9;
@@ -287,3 +354,131 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+/* #endregion info logements */
+
+/* #region hebergement */
+.hebergements-box-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: wrap;
+    gap: 30px;
+    margin-right: 10px;
+}
+
+.hebergements-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 4px;
+    border-radius: 20px;   
+    box-shadow: 0px 3px 15px #d9d9d9;
+}
+
+.hebergements-box-images{
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.hebergements-box-info{
+    padding: 15px ;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;   
+    gap : 10px;
+    padding-bottom: 10px;
+}
+
+.hebergements-box-info-titre{
+    font-weight: bold;   
+}
+/* #endregion hebergement */
+
+/* #region populaires */
+.populaires-title-and-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* #endregion populaires */
+
+/* #region activities */
+.activities-section{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.activities-title{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.activities-grid{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+
+.activities-box{
+    width: 297.5px;
+    height: 439px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 15px #d9d9d9; 
+}
+
+.activities-box-image{
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;    
+}
+
+.activities-box-text{
+    padding: 20px 19px 20px 19px;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+}
+/* #endregion activities */
+
+/* #region footer */
+footer{
+    background-color: var(--main-bg-color);
+    margin-bottom: 0px;
+}
+
+.footer-grid{
+    display: flex;
+    flex-direction: space-between;
+}
+
+.footer-block{
+    flex-grow: 1;
+    padding: 20px;
+    gap: 15px;
+}
+
+.footer-title{
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* #endregion footer */
