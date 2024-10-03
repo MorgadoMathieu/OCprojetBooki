@@ -21,8 +21,11 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 10px 50px;
     box-sizing: border-box;
+    /* j'ai changé le padding top et bot pour qu'il corresponde le plus possible à la maquette */
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 a {
@@ -69,9 +72,6 @@ a {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-
-    /* j'ai changé le padding top pour qu'il corresponde le plus possible à la maquette */
-    padding-top: 10px;
 
 }
 
@@ -124,9 +124,6 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
-
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -184,6 +181,21 @@ a {
     font-size: large;
 }
 
+h2,
+h3{
+    margin: 0px;
+    font-weight: bold;
+}
+
+p{
+    margin: 0px;
+}
+
+
+body{
+    margin: 0px;
+}
+
 
 /* #region display */
 
@@ -212,8 +224,6 @@ a {
 }
 
 .display-hebergements-and-populaires{
-    /* je force le padding top car il ne correspond pas à la maquette sans */
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -225,82 +235,103 @@ a {
 header{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
     padding-bottom: 20px;
+    height: 80px;
 }
 
-.logo-header{
-    width: 40%;
+.header-logo{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    padding: 30px 50px 30px 0px;
+    gap: 10px;
 }
 
-.espace-liens{
-    padding : 15px;
+.header-links-container{
+    padding-top : 10px;
 }
 
-.liens-header{
-    padding : 10px;
+.header-link{
+    padding: 20px;
+    padding-top: 5px;
 }
 
-.liens-header:hover{
+.header-link:hover{
     color: var(--main-color);
-    border-top: solid; 
+    border-top: 5px solid var(--main-color); 
 }
+
 /* #endregion header */
 
 /* #region formulaire recherche */
 
-.recherche{
+form{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+
+.recherche{
     flex-direction: row;
     height: 49px;
+    width: 100%;
     max-width: 377px;
-    background-color: var(--main-bg-color);
     border-radius: 15px;
+    background-color: var(--main-bg-color);
+    
 }
 
 .research-pinmap{
-    background-color: var(--main-bg-color);
-    width: 50px;
-    height: 49px;
-    border-radius: 15px 0px 0px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 49px;
+    width: 50px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: var(--main-bg-color);
 }
+
 
 .research-text{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 96%;
-    box-sizing: border-box;
+    height: 94%;
+    flex-grow: 1;
+    width: 1%;
     border: none;
+    box-sizing: border-box;
     font-size: 16px;
+
+    /* pour laisser de la place à la pin map et au bouton recherche */
+    width: 10%;
 }
 
 .research-text input{
-    text-align: center;
+    width: 100%;
+    height: 100%;
     font-weight: bold;
+    border: none;
+    padding-left: 10px;
 }
 
 
 .research-button{
-    background-color: var(--main-color);
-    font-weight: bold;
-    font-size: large;
-    color: white;
-    width: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 49px;
+    width: 132px;
     border-radius: 0px 15px 15px 0px;
     border: none;
+    padding: 0 16px;
+    font-weight: bold;
+    font-size: large;
+    background-color: var(--main-color);
+    color: white; 
 }
 
-input::placeholder{
-    font-weight: bold;
-}
 /* #endregion formulaire recherche */
 
 /* #region filtres */
@@ -372,24 +403,26 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 4px;
     border-radius: 20px;   
     box-shadow: 0px 3px 15px #d9d9d9;
+    gap: 4px;
 }
 
 .hebergements-box-images{
-    width: 100%;
+    width: 96%;
     height: 124px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
+    border: solid white 5px;
 }
 
 .hebergements-box-info{
-    padding: 15px ;
+    padding-left: 15px;
+    padding-right: 15px;
     display: flex;
     flex-direction: column; 
     justify-content: space-evenly;   
-    gap : 10px;
+    gap : 8px;
     padding-bottom: 10px;
 }
 
@@ -428,7 +461,7 @@ input::placeholder{
 
 .activities-box{
     width: 297.5px;
-    height: 439px;
+    height: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -454,31 +487,63 @@ input::placeholder{
 footer{
     background-color: var(--main-bg-color);
     margin-bottom: 0px;
-}
-
-.footer-grid{
     display: flex;
     flex-direction: space-between;
 }
 
 .footer-block{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     gap: 15px;
-}
-
-.footer-title{
-    font-weight: bold;
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 10px;
+    gap: 15px;
     display: flex;
     flex-direction: column;
 }
 
-
 /* #endregion footer */
+
+/* #region media queries */
+@media (max-width: 375px){
+    body,
+    .main-container{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    header{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 0px;
+        height: 150px;
+    }
+
+    .header-logo{
+        padding: 30px;
+        width: auto;
+        height: 20px;
+    }
+
+    .header-links-container{
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        border-bottom: 5px solid var(--main-bg-color);
+    }
+    
+    .header-link{
+        font-size: medium;
+        padding: 0px;
+        border-bottom: 5px solid red;
+    }
+}
+/* #endregion media queries */
