@@ -30,11 +30,9 @@
         </header>
 
         <main>
-            <div class="display-main-container">
+            <section class="display-main-container">
                 <!-- #region 1st section infos-->
-                <section>
-                    <div class="display-section1">
-
+                <section class="display-section1">
                         <!-- title -->
                         <section>
                             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
@@ -43,42 +41,49 @@
                         </section>
 
                         <!-- search bar -->
-                        <form method="get" action="" class="recherche">
+                        <section>
+                            <form method="get" action="" class="recherche">
                             <!-- research pin map -->
                             <div class="research-pinmap">
                                 <img src="images/logo/pin-map.png" alt="logo pin map"/>
                             </div>
 
                             <!-- research text -->
-                            <div class="research-text">
-                                <input type="text" name="city" id="city-search" class="research-text" value="Marseille, France">
+                            <div class="research-textarea">
+                                <input type="text" name="city" id="city-search" class="research-textarea" value="Marseille, France">
                             </div>
 
                             <!-- research button -->
-                            <input type="submit" value="Recherche" class="research-button">
-                        </form>
+                            <div class="research-button">
+                                <img src="images/logo/icons8-search-21.png" class="research-button-logo" alt="logo loupe">
+                                <input type="submit" value="Recherche" class="research-button-text">
+                            </div>
+                            </form>
+                        </section>
 
                         <!-- filters -->
                         <section class="filters">
-                            <span class="filters-title">Filtres</span>
-                            <div class="filters-button">
-                                <img src="images/logo/price.png" alt="logo bill">
-                                Economique
-                            </div>
+                            <h3>Filtres</h3>
+                            <div class="filters-display">
+                                <div class="filters-button1">
+                                    <img src="images/logo/price.png" alt="logo bill">
+                                    Economique
+                                </div>
 
-                            <div class="filters-button">
-                                <img src="images/logo/body.png" alt="logo body">
-                                Familial
-                            </div>
+                                <div class="filters-button2">
+                                    <img src="images/logo/body.png" alt="logo body">
+                                    Familial
+                                </div>
 
-                            <div class="filters-button">
-                                <img src="images/logo/heart.png">
-                                Romantique
-                            </div>
+                                <div class="filters-button3">
+                                    <img src="images/logo/heart.png">
+                                    Romantique
+                                </div>
 
-                            <div class="filters-button">
-                                <img src="images/logo/flame.png">
-                                Nos pépites
+                                <div class="filters-button4">
+                                    <img src="images/logo/flame.png">
+                                    Nos pépites
+                                </div>
                             </div>
                         </section>
 
@@ -88,10 +93,8 @@
                             <div class="info-logements-button">
                                 <img src="images/logo/i-information-logo.png">
                             </div>
-                            Plus de 500 logements sont disponibles dans cette ville
+                            <p>Plus de 500 logements sont disponibles dans cette ville</p>
                         </section>
-
-                    </div>
                 </section>
                 <!-- #endregion 1st section -->
 
@@ -150,7 +153,6 @@
                                 <!-- box 3 -->
                                 <div class="hebergements-box">
                                     <a href="#h3">
-
                                         <img src="images/hebergements/reisetopia.jpg" class="hebergements-box-images" alt="logement reisetopia">
                                         <div class="hebergements-box-info">
                                             <span class="hebergements-box-info-titre">Hôtel Les mouettes</span>
@@ -176,7 +178,6 @@
                                 <!-- box 4 -->
                                 <div class="hebergements-box">
                                     <a href="#h4">
-
                                         <img src="images/hebergements/annie-spratt.jpg" class="hebergements-box-images" alt="logement annie-spratt">
                                         <div class="hebergements-box-info">
                                             <span class="hebergements-box-info-titre">Hôtel de la mer</span>
@@ -198,12 +199,11 @@
                                 <!-- box 5 -->
                                 <div class="hebergements-box">
                                     <a href="#h5">
-
                                         <img src="images/hebergements/marcus-loke.jpg" class="hebergements-box-images" alt="logement marcus loke">
                                         <div class="hebergements-box-info">
                                             <span class="hebergements-box-info-titre">Auberge La Canebière</span>
                                             <p>Nuit à partir de 25<span class="euro">€</span></p>
-                                            
+                                        
                                             <!-- rating stars -->
                                             <div class="card-rating">
                                                 <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -220,7 +220,6 @@
                                 <!-- box 6 -->
                                 <div class="hebergements-box">
                                     <a href="#h6">
-
                                         <img src="images/hebergements/nicate-lee.jpg" class="hebergements-box-images" alt="logement nicate lee">
                                         <div class="hebergements-box-info">
                                             <span class="hebergements-box-info-titre">Auberge Le Panier</span>
@@ -421,7 +420,7 @@
                     </section> 
         
                 </footer>
-            </div>
+            </section>
         
         </main>
     </div>

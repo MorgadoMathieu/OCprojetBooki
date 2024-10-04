@@ -294,10 +294,10 @@ form{
 }
 
 
-.research-text{
+.research-textarea{
     display: flex;
     align-items: center;
-    height: 94%;
+    height: 90%;
     flex-grow: 1;
     width: 1%;
     border: none;
@@ -308,7 +308,7 @@ form{
     width: 10%;
 }
 
-.research-text input{
+.research-textarea input{
     width: 100%;
     height: 100%;
     font-weight: bold;
@@ -322,14 +322,23 @@ form{
     align-items: center;
     justify-content: center;
     height: 49px;
-    width: 132px;
+    width: auto;
+    padding: 0 16px;
     border-radius: 0px 15px 15px 0px;
     border: none;
-    padding: 0 16px;
-    font-weight: bold;
-    font-size: large;
     background-color: var(--main-color);
-    color: white; 
+}
+
+.research-button-logo{
+    display: none;
+}
+
+.research-button-text{
+    border: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* #endregion formulaire recherche */
@@ -339,15 +348,22 @@ form{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
     height: 50px;
+    gap: 15px;
 }
 
-.filters-title{
-    font-weight: bold;
+.filters-display{
+    display: flex;
+    justify-content: column;
+    gap: 15px;
+    
+
 }
 
-.filters-button{
+.filters-button1,
+.filters-button2,
+.filters-button3,
+.filters-button4{
     width: auto;
     height: 35px;
     display: flex;
@@ -361,10 +377,16 @@ form{
     
 }
 
-.filters-button:hover,
+.filters-button1:hover,
+.filters-button2:hover,
+.filters-button3:hover,
+.filters-button4:hover,
 .info-logements-button:hover{
     background-color: var(--filter-bg-color);
 }
+
+
+
 /* #endregion filtres */
 
 /* #region info logements */
@@ -377,8 +399,11 @@ form{
 }
 
 .info-logements-button{
-    width: 24px;
-    height: 24px;
+    /* je mets une valeur plus grande que son max pour que mon bouton ait toujours la même forme  */
+    width: 100px;
+    height: 100px;
+    max-width: 24px;
+    max-height: 24px;
     border: 1px solid #d9d9d9;
     border-radius: 24px;
     display: flex;
@@ -517,6 +542,16 @@ ul {
         margin: 0px;
     }
 
+    .display-section1{
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 35px;
+    }
+    section{
+        border: 1px solid red;
+    }
+
+    /* #region header */
     header{
         align-items: center;
         flex-direction: column;
@@ -544,5 +579,49 @@ ul {
         padding: 0px;
         border-bottom: 5px solid red;
     }
-}
+    /* #endregion*/
+
+    /* #region section infos */
+    .research-button{
+        border-radius: 15px;
+        max-width: 49px;
+        width: 100%;
+        padding: 0;
+        box-shadow: 0px 3px 15px #d9d9d9;
+    }
+
+    .research-button-text{
+        display: none;
+    }
+
+    .research-button-logo{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+        width: 25px;
+        
+    }
+    /* #endregion section infos*/
+
+    /* #region filters */
+    .filters{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .filters-display{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    /* #endregion filters */
+
+    
+} 
+
+
 /* #endregion media queries */
