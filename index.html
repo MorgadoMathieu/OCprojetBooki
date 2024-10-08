@@ -15,16 +15,13 @@
 </head>
 
 <body>
-
-
     <div class="main-container">
 
         <header>
             <img src="images/logo/Booki.png" class="header-logo">
-
             <div class="header-links-container">
-                <a href="#hebergement-and-populaires" class="header-link" selected>Hebergement</a>
-                <a href="#activities-section" class="header-link">Activités</a>
+                <a href="#h" class="header-link active" id="hebergements-and-populaire">Hebergement</a>
+                <a href="#a" class="header-link" id="activites">Activités</a>
             </div>
 
         </header>
@@ -267,7 +264,7 @@
                                             <h3 class="card-title">Hôtel Le soleil du matin</h3>
                                             <p class="card-subtitle">Nuit à partir de 128<span class="euro">€</span></p>
                                         </div>
-                                        
+
                                         <div class="card-rating">
                                             <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                             <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -277,6 +274,7 @@
                                             <span class="sr-only">Note de 4 sur 5</span>
                                         </div>
                                     </div>
+                                
                                 </article>
                             </a>
 
@@ -422,5 +420,35 @@
         </main>
     </div>
 </body>
+
+<!-- 
+ce script n'est aucunement utile à la réalisation du projet et est voué à être supprimé, 
+il me sert juste à changer le nom de l'onglet selon la taille d'écran du site
+-->
+<script>
+    // Fonction pour mettre à jour le titre
+    function updateTitle() {
+        const width = window.innerWidth; // Obtenir la largeur de la fenêtre
+        const title = document.title; // Récupérer le titre actuel
+
+        if (width <= 375) {
+            document.title = "Booki téléphone";
+        } 
+        else if (width <= 1024) {
+            document.title = "Booki tablette";
+        } 
+        else {
+            document.title = "Booki desktop";
+        }
+
+        console.log(`Titre mis à jour: ${document.title}`); // Pour voir le changement dans la console
+    }
+
+    // Appeler la fonction lors du chargement de la page
+    updateTitle();
+
+    // Écouter les changements de taille de la fenêtre
+    window.addEventListener('resize', updateTitle);
+</script>
 
 </html>
