@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -18,7 +15,7 @@
     <div class="main-container">
 
         <header>
-            <img src="images/logo/Booki.png" class="header-logo">
+            <img src="images/logo/Booki.png" class="header-logo" alt="logo Booki">
             <div class="header-links-container">
                 <a href="#h" class="header-link active" id="hebergements-and-populaire">Hebergement</a>
                 <a href="#a" class="header-link" id="activites">Activités</a>
@@ -26,76 +23,77 @@
         </header>
 
         <main>
-            <section class="display-main-container">
+            <div class="display-main-container">
                 <!-- #region 1st section infos-->
-                <section class="display-section1">
-                        <!-- title -->
-                        <section>
-                            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                            </br>
-                            <p>En plein centre-ville ou pleine nature</p>
-                        </section>
+                <div class="display-section1">
+                    <!-- title -->
+                    <section>
+                        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                        <br>
+                        <p>En plein centre-ville ou pleine nature</p>
+                    </section>
 
-                        <!-- search bar -->
-                        <section>
-                            <form method="get" action="" class="recherche">
+                    <!-- search bar -->
+                    <div>
+                        <form method="get" class="recherche">
                             <!-- research pin map -->
                             <div class="research-pinmap">
-                                <img src="images/logo/pin-map.png" alt="logo pin map"/>
+                                <img src="images/logo/pin-map.png" alt="logo pin map">
                             </div>
-
+                        
                             <!-- research text -->
                             <div class="research-textarea">
                                 <input type="text" name="city" id="city-search" class="research-textarea" value="Marseille, France">
                             </div>
-
+                        
                             <!-- research button -->
                             <div class="research-button">
                                 <img src="images/logo/icons8-search-21.png" class="research-button-logo" alt="logo loupe">
                                 <input type="submit" value="Recherche" class="research-button-text">
                             </div>
-                            </form>
-                        </section>
+                        </form>
+                    </div>
 
-                        <!-- filters -->
-                        <section class="filters">
-                            <h3>Filtres</h3>
-                            <div class="filters-display">
-                                <div class="filters-button1">
-                                    <img src="images/logo/price.png" alt="logo bill">
-                                    <p>Economique</p>
-                                </div>
-
-                                <div class="filters-button2">
-                                    <img src="images/logo/body.png" alt="logo body">
-                                    <p>Familial</p>
-                                </div>
-
-                                <div class="filters-button3">
-                                    <img src="images/logo/heart.png" alt="logo heart">
-                                    <p>Romantique</p>
-                                </div>
-
-                                <div class="filters-button4">
-                                    <img src="images/logo/flame.png" alt="logo flame">
-                                    <p>Nos pépites</p>
-                                </div>
+                    <!-- filters -->
+                    <section class="filters">
+                        <h3>Filtres</h3>
+                        <div class="filters-display">
+                            <div class="filters-button1">
+                                <img src="images/logo/price.png" alt="logo bill">
+                                <p>Economique</p>
                             </div>
-                        </section>
 
-
-                        <!-- informations logements -->
-                        <section class="info-logements">
-                            <div class="info-logements-button">
-                                <img src="images/logo/i-information-logo.png">
+                            <div class="filters-button2">
+                                <img src="images/logo/body.png" alt="logo body">
+                                <p>Familial</p>
                             </div>
-                            <p>Plus de 500 logements sont disponibles dans cette ville</p>
-                        </section>
-                </section>
+
+                            <div class="filters-button3">
+                                <img src="images/logo/heart.png" alt="logo heart">
+                                <p>Romantique</p>
+                            </div>
+
+                            <div class="filters-button4">
+                                <img src="images/logo/flame.png" alt="logo flame">
+                                <p>Nos pépites</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- informations logements -->
+                    <div class="info-logements">
+                        <div class="info-logements-button">
+                            <img src="images/logo/i-information-logo.png" alt="logo infirmation">
+                        </div>
+                        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    </div>
+                        
+                </div>
                 <!-- #endregion 1st section -->
 
                 <!-- #region 2nd section hebergements-and-populaire -->
-                <section class="hebergements-and-populaires" id="hebergements-and-populaires">
+                <div class="hebergements-and-populaires" id="hebergements-and-populaires">
                     <section class="hebergements">
                         <div class="display-hebergements-and-populaires">
                             <h2>Hébergements à Marseille</h2>
@@ -108,7 +106,7 @@
                                     <article class="hebergements-box">
                                             <img src="images/hebergements/fred-kleber.jpg" class="hebergements-box-images" alt="logement fred fred-kleber">
                                             <div class="hebergements-box-info">
-                                                <span class="hebergements-box-info-titre">Hôtel du port</span>
+                                                <h3 class="hebergements-box-info-titre">Hôtel du port</h3>
                                                 <!-- nom des cartes h3 -->
                                                 <p>Nuit à partir de 52<span class="euro">€</span></p>
 
@@ -122,7 +120,6 @@
                                                     <span class="sr-only">Note de 4 sur 5</span>
                                                 </div>
                                             </div>
-                                        
                                     </article>
                                 </a>
 
@@ -132,7 +129,7 @@
 
                                             <img src="images/hebergements/febrian-zakaria.jpg" class="hebergements-box-images" alt="logement febrian zakaria">
                                             <div class="hebergements-box-info">
-                                                <span class="hebergements-box-info-titre">Hôtel Chez Amina</span>
+                                                <h3 class="hebergements-box-info-titre">Hôtel Chez Amina</h3>
                                                 <p>Nuit à partir de 96<span class="euro">€</span></p>
 
                                                 <!-- rating stars -->
@@ -155,7 +152,7 @@
 
                                             <img src="images/hebergements/reisetopia.jpg" class="hebergements-box-images" alt="logement reisetopia">
                                             <div class="hebergements-box-info">
-                                                <span class="hebergements-box-info-titre">Hôtel Les mouettes</span>
+                                                <h3 class="hebergements-box-info-titre">Hôtel Les mouettes</h3>
                                                 <p>Nuit à partir de 76<span class="euro">€</span></p>
 
                                                 <!-- rating stars -->
@@ -181,7 +178,7 @@
 
                                             <img src="images/hebergements/annie-spratt.jpg" class="hebergements-box-images" alt="logement annie-spratt">
                                             <div class="hebergements-box-info">
-                                                <span class="hebergements-box-info-titre">Hôtel de la mer</span>
+                                                <h3 class="hebergements-box-info-titre">Hôtel de la mer</h3>
                                                 <p>Nuit à partir de 46<span class="euro">€</span></p>
 
                                                 <!-- rating stars -->
@@ -203,7 +200,7 @@
                                     <article class="hebergements-box">
                                             <img src="images/hebergements/marcus-loke.jpg" class="hebergements-box-images" alt="logement marcus loke">
                                             <div class="hebergements-box-info">
-                                                <span class="hebergements-box-info-titre">Auberge La Canebière</span>
+                                                <h3 class="hebergements-box-info-titre">Auberge La Canebière</h3>
                                                 <p>Nuit à partir de 25<span class="euro">€</span></p>
                                             
                                                 <!-- rating stars -->
@@ -224,7 +221,7 @@
                                     <article class="hebergements-box">
                                             <img src="images/hebergements/nicate-lee.jpg" class="hebergements-box-images" alt="logement nicate lee">
                                             <div class="hebergements-box-info">
-                                                <span class="hebergements-box-info-titre">Auberge Le Panier</span>
+                                                <h3 class="hebergements-box-info-titre">Auberge Le Panier</h3>
                                                 <p>Nuit à partir de 23<span class="euro">€</span></p>
 
                                                 <!-- rating stars -->
@@ -280,7 +277,6 @@
                                             <span class="sr-only">Note de 4 sur 5</span>
                                         </div>
                                     </div>
-                                
                                 </article>
                             </a>
 
@@ -330,8 +326,8 @@
 
                         <!-- #endregion populaires cards -->
                     </section>
-
-                </section>
+                    
+                </div>
                 <!-- #endregion hebergements-and-populaires -->
 
                 <!-- #region 3rd section activites -->
@@ -393,7 +389,6 @@
 
                 <footer>
                     <section class="footer-block">
-                        <!-- titres en h2 -->
                         <h2><span class="footer-title">À propos</span></h2>
                         <ul>
                             <li><a href="#fonctionnement-du-site">Fonctionnement du site           </a></li>
@@ -407,7 +402,7 @@
                         <ul>
                             <li><a href="#charte-qualite">Charte qualité                           </a></li>
                             <li><a href="#proposer-votre-hotel">Proposer votre hôtel               </a></li>
-                        <ul>
+                        </ul>
                     </section>
 
                     <section class="footer-block">
@@ -415,11 +410,10 @@
                         <ul>
                             <li><a href="#centre-aide">Centre d'aide                               </a></li>
                             <li><a href="#nous-contacter">Nous contacter                           </a></li>
-                        <ul>                            
-                    </section> 
-        
+                        </ul>                            
+                    </section>  
                 </footer>
-            </section>
+            </div>
         </main>
     </div>
 </body>
