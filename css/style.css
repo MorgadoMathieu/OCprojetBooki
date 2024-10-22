@@ -125,6 +125,8 @@ a {
     margin-bottom: 5px;
 }
 
+
+
 /* Mes ajouts */
 
 /* #region */
@@ -387,7 +389,7 @@ form{
 }
 
 .hebergements-box-images{
-    width: 96%;
+    width: calc(100% - 10px);
     height: 124px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
@@ -603,7 +605,7 @@ ul {
         padding: 10px;
         border-top: none;
         width: 50%;
-        text-align: center; /* Centre le texte des liens */
+        text-align: center;
     }
 
     /* #endregion header*/
@@ -684,10 +686,8 @@ ul {
         height: auto;
     }
 
-    .hebergements{
-        background-color: white;
-        display: flex;
-        align-items: center
+    section.hebergements{
+        background-color: white; 
     }
 
     .hebergements-box-grid{
