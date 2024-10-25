@@ -318,10 +318,7 @@ form{
     gap: 15px;
 }
 
-.filters-button1,
-.filters-button2,
-.filters-button3,
-.filters-button4{
+.filters-button{
     width: auto;
     height: 35px;
     display: flex;
@@ -335,10 +332,7 @@ form{
     
 }
 
-.filters-button1:hover,
-.filters-button2:hover,
-.filters-button3:hover,
-.filters-button4:hover,
+.filters-button:hover,
 .info-logements-button:hover{
     background-color: var(--filter-bg-color);
 }
@@ -346,7 +340,6 @@ form{
 /* #endregion filtres */
 
 /* #region info logements */
-
 .info-logements{
     display: flex;
     flex-direction: row;
@@ -355,18 +348,14 @@ form{
 }
 
 .info-logements-button{
-    /* je mets une valeur plus grande que son max pour que mon bouton ait toujours la même forme  */
-    width: 100px;
-    height: 100px;
-    max-width: 24px;
-    max-height: 24px;
+    width: 24px;
+    height: 24px;
     border: 1px solid #d9d9d9;
     border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 /* #endregion info logements */
 
 /* #region hebergement */
@@ -466,8 +455,6 @@ form{
     align-items: center;
     padding: 20px;
 }
-
-
 /* #endregion activities */
 
 /* #region footer */
@@ -604,10 +591,10 @@ ul {
     .header-link {
         padding: 10px;
         border-top: none;
+        border-bottom: var(--main-bg-color) solid 3px;
         width: 50%;
         text-align: center;
     }
-
     /* #endregion header*/
 
     /* #region section infos */
